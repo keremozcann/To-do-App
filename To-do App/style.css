@@ -1,0 +1,228 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-family: "Poppins", sans-serif;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #78b3ce, #c2ffc7);
+}
+.container {
+  position: relative;
+  max-width: 540px;
+  width: 100%;
+  background-color: #f8f9fa;
+  height: 70vh;
+  border-radius: 10px;
+  padding: 5px 30px;
+  display: flex;
+  flex-direction: column;
+}
+.card-header {
+  margin: 15px 0px 25px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card-header h2 {
+  font-size: 2rem;
+}
+.card-header h2 i {
+  margin-right: 10px;
+}
+.card-body {
+  margin-bottom: 20px;
+}
+.card-body form {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  padding: 5px;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 15px;
+}
+.card-body form input {
+  padding: 4px 10px;
+  background: #fff;
+  font-size: 17px;
+  border: none;
+  outline: none;
+  flex: 0.9;
+}
+.card-body form button {
+  cursor: pointer;
+  flex: 0.1;
+  border: none;
+  outline: none;
+  background: #057eff;
+  color: #fff;
+  border-radius: 3px;
+  padding: 8px 5px;
+  font-size: 15px;
+  transition: background 0.4s;
+}
+.card-body form button:hover {
+  background: #2e93fe;
+}
+.card-body form button:active {
+  background: #007bff;
+}
+.underline {
+  margin-bottom: 20px;
+}
+#to-do-list {
+  list-style-type: none;
+  margin-bottom: 20px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-right: 10px;
+  flex-grow: 1;
+}
+.to-do-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 5px;
+}
+
+.to-do-item span {
+  flex: 1;
+  margin-left: 8px;
+  white-space: normal;
+  word-wrap: break-word;
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+.to-do-item,
+.to-do-item input {
+  cursor: pointer;
+}
+.to-do-item i {
+  transition: 0.2s;
+}
+.to-do-item i:hover {
+  color: #fa4032;
+}
+.to-do-item.completed span {
+  text-decoration: line-through;
+  color: #818181;
+}
+.info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px 20px;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f8f9fa;
+  border-top: 1px solid #ddd;
+  border-radius: 0px 0px 10px 10px;
+}
+.info span {
+  font-size: 14px;
+  color: #818181;
+}
+.clear-button {
+  background-color: #fff;
+  border: 1px solid #e63946;
+  padding: 5px 8px;
+  border-radius: 3px;
+  color: #e63946;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.clear-button:hover {
+  background-color: #e63946;
+  color: #fff;
+}
+.disable {
+  display: none;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  font-size: 15px;
+}
+@media only screen and (max-width: 1024px) {
+  html {
+    font-size: 16px;
+  }
+  .container {
+    max-width: 100%;
+    width: 60%;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+  }
+  #to-do-list {
+    flex-grow: 1;
+    overflow-y: auto;
+  }
+
+  .info {
+    position: absolute;
+    flex-shrink: 0;
+    bottom: 0;
+  }
+  footer {
+    position: absolute;
+    bottom: 0;
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  html {
+    font-size: 12px !important;
+  }
+  .container {
+    width: 90%;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+  }
+  .card-body form input {
+    padding: 4px 5px 4px 10px;
+    font-size: 15px;
+  }
+  .card-body form button {
+    padding: 8px 15px;
+    font-size: 14px;
+  }
+  #to-do-list {
+    flex-grow: 1;
+    overflow-y: auto;
+  }
+
+  .info {
+    position: absolute;
+    flex-shrink: 0;
+    bottom: 0;
+  }
+  .info #info-text {
+    font-size: 12px;
+  }
+  .info .clear-button {
+    font-size: 13px;
+  }
+  footer {
+    position: absolute;
+    bottom: 0;
+    font-size: 12px;
+  }
+}

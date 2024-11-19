@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Todo App</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card-header">
+        <h2><i class="fa-solid fa-list-check"></i>To-do App</h2>
+      </div>
+      <div class="card-body">
+        <form>
+          <input type="text" id="input-box" placeholder="Add new task" />
+          <button type="submit" id="add-button" onclick="addTask()">Add</button>
+        </form>
+      </div>
+      <hr class="underline" />
+      <ul id="to-do-list"></ul>
+      <div class="info" id="info">
+        <span id="info-text"></span>
+        <button class="clear-button disable" onclick="clearAll()">Clear</button>
+      </div>
+    </div>
+    <footer>
+      Created By
+      <a href="https://www.linkedin.com/in/kerem-%C3%B6zcan/" target="_blank"
+        >Kerem ÖZCAN</a
+      >
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
